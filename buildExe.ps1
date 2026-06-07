@@ -1,1 +1,0 @@
-g++ main.cpp include/scheduleClass.cpp include/functions.cpp -o main.exe
