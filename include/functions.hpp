@@ -1,6 +1,21 @@
-#include <iostream> 
-using namespace std; 
+#ifndef FUNCTIONS_HPP
+#define FUNCTIONS_HPP
 
-void printCentered(string text, int width); 
+#include <vector>
+#include "scheduleClass.hpp"
 
-void printLine(int width);
+class Manager {
+public:
+    void addTask();
+    void viewTasks();
+    void deleteTask();
+    void editTask();
+    void markComplete();
+    void filterPriority();
+    void filterStatus();
+
+private:
+    vector<Task> tasks;
+};
+
+#endif
