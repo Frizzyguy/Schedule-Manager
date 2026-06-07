@@ -2,8 +2,9 @@
 #define TASK_HPP
 
 #include <iostream>
-#include <vector>
 using namespace std;
+
+const int MAX_TASKS = 100;
 
 class Task {
 public:
@@ -13,14 +14,18 @@ public:
     string priority;
     string status;
 
-    Task(string n, string d, int month, int day, string p);
+    Task();
+    Task(string n, string d, int m, int day, string p);
 };
 
 class TaskManager {
 private:
-    vector<Task> tasks;
+    Task tasks[MAX_TASKS];
+    int count;
 
 public:
+    TaskManager();
+
     void addTask();
     void viewTasks();
     void deleteTask();
