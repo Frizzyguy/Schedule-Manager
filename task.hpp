@@ -2,6 +2,7 @@
 #define TASK_HPP
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 const int MAX_TASKS = 100;
@@ -30,6 +31,13 @@ public:
     void viewTasks();
     void deleteTask();
     void markComplete();
+
+    // NEW FEATURES
+    void searchTask();
+    void sortByPriority();
+    void sortByDate();
+    void saveToFile();
+    void loadFromFile();
 };
 
 #endif
